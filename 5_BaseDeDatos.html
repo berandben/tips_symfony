@@ -1,0 +1,25 @@
+﻿<html><body> <p>Symfony 5</p>
+	<p>5.- Conexión a la base de datos</p>
+	<p>Duplicar el archivo .env y renombrar como .env.local</p>
+	<p>Dejando solo la parte de doctrine-bundle</p>
+	<p>###&gt; doctrine/doctrine-bundle ###<br/># Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url<br/># IMPORTANT: You MUST configure your server version, either here or in config/packages/doctrine.yaml#<br/># DATABASE_URL=&quot;sqlite:///%kernel.project_dir%/var/data.db&quot;<br/># DATABASE_URL=&quot;mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7&quot;<br/>DATABASE_URL=&quot;postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&amp;charset=utf8&quot;<br/>###&lt; doctrine/doctrine-bundle ###</p>
+	
+	<p></p><p>Sustituir</p>
+	<p>db_user &nbsp; &nbsp; &nbsp; &nbsp; (usuario)<br/>db_password &nbsp;(password)<br/>db_name &nbsp; &nbsp; &nbsp; (nombre_base_datos)</p>
+	<p></p>
+	<p>Consulta para mostrar la versión en uso</p>
+	<p><code>SHOW VARIABLES LIKE &quot;%version%&quot;;</code></p>
+	<p></p>
+	<p>Ejemplo para root sin pass</p>
+	<p>###&gt; doctrine/doctrine-bundle ###<br/>DATABASE_URL=&quot;mysql://root:@127.0.0.1:3306/base_datos_prueba?serverVersion=5.7&quot;<br/>###&lt; doctrine/doctrine-bundle ###</p>
+	<p></p>
+	<p>IMPORTANTE!!!! &nbsp; Si usamos MySQL&nbsp;como gestor de base de datos&nbsp;</p>
+	<p>###&gt; doctrine/doctrine-bundle ###<br/> DATABASE_URL=&quot;mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7&quot;<br/>###&lt; doctrine/doctrine-bundle ###</p>
+	<p></p>
+	<p>IMPORTANTE!!!! &nbsp; Si usamos MariaDB como gestor de base de datos&nbsp;</p>
+	<p></p>
+	<p>Crear la base de datos</p>
+	<p>php bin/console doctrine:database:create</p>
+	<p></p>
+	<p></p>
+	<p></p></body></html>
