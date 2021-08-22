@@ -6,6 +6,13 @@ version
 
 composer -v  
 
+actualizar symfony  
+
+
+symfony self:update  
+
+
+
 
 
 
